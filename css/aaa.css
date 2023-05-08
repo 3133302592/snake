@@ -1,0 +1,19 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+td{
+    height: 48px;
+    width: 48px;
+}
+#ditu{
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+}
