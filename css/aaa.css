@@ -1,7 +1,19 @@
-
 *{
     margin: 0;
     padding: 0;
+}
+body {
+    position: relative;
+    text-align: center;
+}
+.hezi{
+    position: absolute;
+    width: 1000px;
+    margin:20px auto;
+    top: 40px;
+    bottom: 0;
+    left: auto;
+    right: 0;
 }
 table{
     position: absolute;
@@ -16,4 +28,33 @@ td{
     width: 500px;
     height: 500px;
     background-color: aqua;
+}
+#play{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+h1{
+    position: absolute;
+}
+#motif1{
+    margin: 15px 10px 0 0;
+}
+#motif2{
+    margin: 15px 100px 0 0;
+}
+#map1{
+    margin: 15px 10px 0 0;
+}
+#map2{
+    margin: 15px 10px 0 0;
+}
+#map3{
+    margin: 15px 100px 0 0;
+}
+#difficulty1{
+    margin: 15px 10px 0 0;
+}
+#difficulty2{
+    margin: 15px 100px 0 0;
 }
