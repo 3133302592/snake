@@ -13,8 +13,20 @@ function suiji(color) {
     ditu.appendChild(div);
     return div;
 }
-let shetou = suiji('red')
-let shiwu = suiji('yellow')
+function suiji2(color) {
+
+    let div = document.createElement('div');
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.position = 'absolute';
+    div.style.backgroundColor = color;
+    div.style.left =  50 + 'px';
+    div.style.top =  50+ 'px';
+    ditu.appendChild(div);
+    return div;
+}
+let shetou = suiji2('red')
+let shiwu = suiji('orange')
 let arr = [];
 let f = 0;
 shetou.value = '右'
@@ -116,7 +128,7 @@ function play() {
             let px = parseInt(Math.random() * 10) * 50;
             let py = parseInt(Math.random() * 10) * 50;
             for (let i = 0; i < arr.length; i++) {
-                if (parseInt(arr[0].style.left) == px && parseInt(arr[0].style.top) == py) {
+                if (parseInt(arr[i].style.left) == px && parseInt(arr[i].style.top) == py) {
                     px = parseInt(Math.random() * 10) * 50;
                     py = parseInt(Math.random() * 10) * 50;
                     i = -1;
@@ -142,6 +154,7 @@ function play() {
                 if (parseInt(shetou.style.left + 'px') == parseInt(arr[i].style.left + 'px') && parseInt(shetou.style.top + 'px') == parseInt(arr[i].style.top + 'px')) {
                     alert('咬尾巴了' + '\n' + '分数:' + f);
                     clearInterval(p);
+                    location.reload();
                 }
             }
         }
@@ -181,7 +194,6 @@ function map2() {
     if (ditu.style.width == '500px') {
         let table = document.getElementById('mytable');
         let rows = table.getElementsByTagName('tr');
-
         for (let i = 0; i < rows.length; i++) {
             for (let j = 0; j < 5; j++) {
                 let cell = document.createElement('td');
@@ -191,6 +203,22 @@ function map2() {
         }
     }
 }
+
+function map3(){
+    if(ditu.style.width=='500px'){
+        let table=document.getElementById('mytable');
+        let hezi=document.getElementById('hezi');
+        hezi.removeChild(table);
+    }
+}
+
+
+
+
+
+
+
+
 let arrs = [];
 let difficulty = document.getElementById('difficulty1');
 difficulty.onclick = function () {
@@ -199,7 +227,7 @@ difficulty.onclick = function () {
     let px = parseInt(Math.random() * 10) * 50;
     let py = parseInt(Math.random() * 10) * 50;
     for (let i = 0; i < arr.length; i++) {
-        if (parseInt(arr[0].style.left) == px && parseInt(arr[0].style.top) == py) {
+        if (parseInt(arr[i].style.left) == px && parseInt(arr[i].style.top) == py) {
             px = parseInt(Math.random() * 10) * 50;
             py = parseInt(Math.random() * 10) * 50;
             i = -1;
